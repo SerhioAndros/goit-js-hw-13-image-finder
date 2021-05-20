@@ -35,34 +35,58 @@ li {
   list-style: none;
 }
 body {
-  background-color: rgb(231, 223, 223);
+  background-color: #c0f7c7;
   padding-left: 30px;
   padding-right: 30px;
 }
 .search-form {
-  width: 350px;
-  height: 50px;
+  width: 450px;
+  height: 100px;
   margin: 0 auto;
-  margin-top: 35px;
-  margin-bottom: 25px;
+  margin-top: 15px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   & input {
-    width: 80%;
-    height: 90%;
+    width: 60%;
+    height: 40px;
+    margin-bottom: 10px;
     padding-left: 7px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.22;
-    color: rebeccapurple;
-    border: 3px solid purple;
+    color: rgb(27, 31, 28);
+    border: 3px solid #38753f;
     border-radius: 10px;
     // background-color: rgb(255, 208, 168);
-    background-color: paleturquoise;
+    background-color: #76f584;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     outline: none;
+  }
+  & button {
+    width: 40%;
+    height: 30px;
+    padding-left: 7px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(27, 31, 28);
+    letter-spacing: 0.03em;
+    line-height: 1.22;
+    background-color: #76f584;
+    border: 3px solid #38753f;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: #5dc269;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
   }
 }
 
@@ -78,7 +102,7 @@ body {
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
   margin-top: 30px;
-  border: 2px solid gray;
+  border: 2px solid #38753f;
   box-sizing: border-box;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -86,6 +110,7 @@ body {
 
 .photo-card {
   padding-bottom: 12px;
+  background-color: #5dc269;
   & img {
     width: 100%;
     height: 100%;
