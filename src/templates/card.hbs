@@ -1,49 +1,26 @@
-<li class='gallery-item'>
-  <div class='photo-card'>
-    <img
-      src='https://cdn.pixabay.com/photo/2015/03/26/09/43/animal-690159_1280.jpg'
-      alt='cute racoon'
-    />
-    <div class='stats'>
-      <p class='stats-item'>
-        <i class='material-icons'>thumb_up</i>
-        1108
-      </p>
-      <p class='stats-item'>
-        <i class='material-icons'>visibility</i>
-        320321
-      </p>
-      <p class='stats-item'>
-        <i class='material-icons'>comment</i>
-        129
-      </p>
-      <p class='stats-item'>
-        <i class='material-icons'>cloud_download</i>
-        176019
-      </p>
+{{#each hits}}
+
+  <li class='gallery-item'>
+    <div class='photo-card'>
+      <img src='{{webformatURL}}' alt='{{tags}}' />
+      <div class='stats'>
+        <p class='stats-item'>
+          <i class='material-icons'>thumb_up</i>
+          {{likes}}
+        </p>
+        <p class='stats-item'>
+          <i class='material-icons'>visibility</i>
+          {{views}}
+        </p>
+        <p class='stats-item'>
+          <i class='material-icons'>comment</i>
+          {{comments}}
+        </p>
+        <p class='stats-item'>
+          <i class='material-icons'>cloud_download</i>
+          {{downloads}}
+        </p>
+      </div>
     </div>
-  </div>
-</li>
-
-{{! <div class='photo-card'>
-  <img src='' alt='' />
-
-  <div class='stats'>
-    <p class='stats-item'>
-      <i class='material-icons'>thumb_up</i>
-      1108
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>visibility</i>
-      320321
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>comment</i>
-      129
-    </p>
-    <p class='stats-item'>
-      <i class='material-icons'>cloud_download</i>
-      176019
-    </p>
-  </div>
-</div> }}
+  </li>
+{{/each}}
