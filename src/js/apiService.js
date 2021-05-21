@@ -1,10 +1,12 @@
-const BASE_URL = 'https://pixabay.com/api';
+const BASE_URL = 'https://pixabay.com/api/?image_type=photo&orientation=horizontal&q=';
+const apiKey = '21715456-94146d2128778e129cf5897fe';
+let page = 1;
 
-const fetchCountries = (request = '') =>
-  fetch(BASE_URL + request).then(res => {
+const fetchImages = request =>
+  fetch(`${BASE_URL}${request}&page=${page}&per_page=12&key=${apiKey}`).then(res => {
     if (res.status === 404) {
-      throw new Error(`Страна не найдена! Попробуйте еще раз`);
+      throw new Error(`There are no such IMG in data-base`);
     }
     return res.json();
   });
-export { fetchCountries };
+export { fetchImages };
